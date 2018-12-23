@@ -1,7 +1,7 @@
 var canvas = document.querySelector("canvas");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = 1000;
+canvas.height = 100;
 var c = canvas.getContext("2d");
 
 // Constructor Function (object blueprint)
@@ -16,31 +16,33 @@ function Circle(x, y, dx, dy, radius, counter) {
   this.draw = function() {
     c.beginPath();
     c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-    c.strokeStyle = "green";
+    c.strokeStyle = "white";
     c.stroke();
-    c.fillStyle = "lightgrey";
+    c.fillStyle = "white";
     c.fill();
   };
 
   this.update = function() {
     // If it hits side, change position
-    console.log(counter);
-    if (counter == 50) {
-      this.dx = -this.dx;
-      counter = 0;
-    }
+    // if (counter == 50) {
+    //   this.dx = -this.dx;
+    //   counter = 0;
+    // }
 
-    if (this.x + this.radius > innerWidth || this.x - this.radius < 0) {
-      this.dx = -this.dx;
-    }
-    if (this.y + this.radius > innerHeight || this.y - this.radius < 0) {
-      this.dy = -this.dy;
+    // if (this.x + this.radius > innerWidth || this.x - this.radius < 0) {
+    //   this.dx = -this.dx;
+    // }
+    // if (this.y + this.radius > innerHeight || this.y - this.radius < 0) {
+    //   this.dy = -this.dy;
+    // }
+    if (this.y + this.radius > canvas.height) {
+      this.y = 0;
     }
     this.x += this.dx;
     this.y += this.dy;
 
     this.draw();
-    counter++;
+    // counter++;
   };
 }
 
@@ -48,12 +50,12 @@ function Circle(x, y, dx, dy, radius, counter) {
 var circleArray = [];
 
 for (var i = 0; i < 50; i++) {
-  var radius = 30;
+  var radius = 1 + Math.random() * 5;
   var x = Math.random() * (innerWidth - radius * 2) + radius;
-  var y = 30; // start at top
+  var y = 0 - Math.random() * 50; // start at top
   // var y = Math.random() * (innerHeight - radius * 2) + radius; // + radius prevents circles spawning on edge
-  var dx = (Math.random() - 0.5) * 4;
-  var dy = Math.random() * 2; // use gravity
+  var dx = (Math.random() - 0.5) * 2;
+  var dy = 0.5 + Math.random() * 0.5; // use gravity
   circleArray.push(new Circle(x, y, dx, dy, radius, 0));
 }
 
@@ -62,7 +64,6 @@ function animate() {
   c.clearRect(0, 0, innerWidth, innerHeight); // erases previously drawn content
 
   for (var i = 0; i < circleArray.length; i++) {
-    // circleArray[i].draw();
     circleArray[i].update();
   }
 }

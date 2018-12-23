@@ -4,9 +4,12 @@ body {
 .wrapper {
   position: relative;
   padding-top: 50vh;
+  width: 1000px;
+  height: 110px;
 }
 .wrapper > * {
   position: absolute;
+  z-index: 5;
 }
 canvas {
   position: absolute;

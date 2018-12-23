@@ -2,7 +2,6 @@ var canvas = document.querySelector("canvas");
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-
 var c = canvas.getContext("2d");
 
 // Constructor Function (object blueprint)
@@ -23,6 +22,7 @@ function Circle(x, y, dx, dy, radius) {
   };
 
   this.update = function() {
+    // If it hits side, change position
     if (this.x + this.radius > innerWidth || this.x - this.radius < 0) {
       this.dx = -this.dx;
     }
@@ -39,12 +39,13 @@ function Circle(x, y, dx, dy, radius) {
 // var circle = new Circle(200,200, 3,3, 30);
 var circleArray = [];
 
-for (var i = 0; i < 100; i++) {
+for (var i = 0; i < 50; i++) {
   var radius = 30;
   var x = Math.random() * (innerWidth - radius * 2) + radius;
-  var y = Math.random() * (innerHeight - radius * 2) + radius; // + radius prevents circles spawning on edge
-  var dx = (Math.random() - 0.5) * 8;
-  var dy = (Math.random() - 0.5) * 8;
+  var y = 30; // start at top
+  // var y = Math.random() * (innerHeight - radius * 2) + radius; // + radius prevents circles spawning on edge
+  var dx = (Math.random() - 0.5) * 4;
+  var dy = Math.random() * 2; // use gravity
   circleArray.push(new Circle(x, y, dx, dy, radius));
 }
 

@@ -23,18 +23,6 @@ function Circle(x, y, dx, dy, radius, counter) {
   };
 
   this.update = function() {
-    // If it hits side, change position
-    // if (counter == 50) {
-    //   this.dx = -this.dx;
-    //   counter = 0;
-    // }
-
-    // if (this.x + this.radius > innerWidth || this.x - this.radius < 0) {
-    //   this.dx = -this.dx;
-    // }
-    // if (this.y + this.radius > innerHeight || this.y - this.radius < 0) {
-    //   this.dy = -this.dy;
-    // }
     if (this.y + this.radius > canvas.height) {
       this.y = 0;
     }
@@ -42,18 +30,17 @@ function Circle(x, y, dx, dy, radius, counter) {
     this.y += this.dy;
 
     this.draw();
-    // counter++;
   };
 }
 
-// var circle = new Circle(200,200, 3,3, 30);
+// Initialize array to store snow objects
 var circleArray = [];
 
+// Initialize objects with constructor
 for (var i = 0; i < 50; i++) {
   var radius = 1 + Math.random() * 5;
-  var x = Math.random() * (innerWidth - radius * 2) + radius;
-  var y = 0 - Math.random() * 50; // start at top
-  // var y = Math.random() * (innerHeight - radius * 2) + radius; // + radius prevents circles spawning on edge
+  var x = Math.random() * (1000 - radius * 2) + radius;
+  var y = 0 - Math.random() * 50; // start at top, render some circles off screen
   var dx = (Math.random() - 0.5) * 2;
   var dy = 0.5 + Math.random() * 0.5; // use gravity
   circleArray.push(new Circle(x, y, dx, dy, radius, 0));

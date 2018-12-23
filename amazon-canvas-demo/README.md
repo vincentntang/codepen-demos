@@ -14,9 +14,9 @@ Changelog of Amazon Canvas Snow Demo
 
 ![](https://i.imgur.com/xNuo7hu.gif)
 
-### 3. Finished version amazon snow
+### 3. Amazon snow working as expected
 
 - Fixed the spawn so circles would start uptop instead
-- Issues - some of the snow fades away over time, possibly because it goes off screen forever
+- Issues - some of the snow fades away over time, possibly because it goes off screen forever, but maybe that's a good thing
 
 ![](https://i.imgur.com/p9z6Zvu.gif)

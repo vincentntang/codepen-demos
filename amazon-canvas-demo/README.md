@@ -7,3 +7,7 @@ Changelog of Amazon Canvas Snow Demo
 - Modify dy to be more predictable
 
 ![](https://i.imgur.com/bvDIAGB.gif)
+
+### 2. Added dx change for snow
+
+![](https://i.imgur.com/xNuo7hu.gif)

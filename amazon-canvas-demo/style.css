@@ -1,0 +1,16 @@
+body {
+  background-color: grey;
+}
+.wrapper {
+  position: relative;
+  padding-top: 50vh;
+}
+.wrapper > * {
+  position: absolute;
+}
+canvas {
+  position: absolute;
+}
+img {
+  width: 100%;
+}

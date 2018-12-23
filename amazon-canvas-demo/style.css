@@ -1,15 +1,17 @@
 body {
   background-color: grey;
+  display: flex;
+  justify-content: center;
 }
 .wrapper {
   position: relative;
-  padding-top: 50vh;
   width: 1000px;
   height: 110px;
+  min-height: 110px;
+  margin-top: 50vh;
 }
 .wrapper > * {
   position: absolute;
-  z-index: 5;
 }
 canvas {
   position: absolute;

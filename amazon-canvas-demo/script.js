@@ -47,16 +47,17 @@ for (var i = 0; i < 50; i++) {
 }
 
 function animate() {
+  if (window.innerWidth < 1000) {
+    canvas.width = window.innerWidth;
+  } else {
+    canvas.width = 1000;
+  }
+
   requestAnimationFrame(animate); // recurisvely run
   c.clearRect(0, 0, innerWidth, innerHeight); // erases previously drawn content
 
   for (var i = 0; i < circleArray.length; i++) {
     circleArray[i].update();
-  }
-  // if (window.innerWidth < 1000) {
-  //   canvas.width = window.innerWidth;
-  // } else {
-    // canvas.width = 1000;  // ADDING THIS LINE STOPS ANIMATION, WHY?
   }
 }
 animate();

@@ -1,6 +1,7 @@
 var canvas = document.querySelector("canvas");
 
-canvas.width = 1000;
+var canvasWidth = 1000;
+canvas.width = canvasWidth;
 canvas.height = 100;
 var c = canvas.getContext("2d");
 
@@ -30,6 +31,11 @@ function Circle(x, y, dx, dy, radius, counter) {
     this.y += this.dy;
 
     this.draw();
+    if (window.innerwidth > canvasWidth) {
+      canvasWidth = window.innerWidth;
+    } else {
+      canvasWidth = 1000;
+    }
   };
 }
 
@@ -39,7 +45,7 @@ var circleArray = [];
 // Initialize objects with constructor
 for (var i = 0; i < 50; i++) {
   var radius = 1 + Math.random() * 5;
-  var x = Math.random() * (1000 - radius * 2) + radius;
+  var x = Math.random() * canvasWidth;
   var y = 0 - Math.random() * 50; // start at top, render some circles off screen
   var dx = (Math.random() - 0.5) * 2;
   var dy = 0.5 + Math.random() * 0.5; // use gravity

@@ -9,3 +9,7 @@ https://www.youtube.com/watch?v=_2miX4rxkJs
 2. Transform and border radius
 
 ![](https://i.imgur.com/Y3cXmsl.png)
+
+3. Box shadow and black background
+
+![](https://i.imgur.com/7Qt3Zuz.png)

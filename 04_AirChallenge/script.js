@@ -60,7 +60,7 @@ function run() {
   function renderSpiral(spiral) {
     spiral.render(ctx);
   }
-
+  // START OF OBJECT CONSTRUCTOR
   function Spiral(config) {
     var offset = 0;
     var lineSegments = computeLineSegments();
@@ -110,7 +110,7 @@ function run() {
       return lineSegments;
     }
   }
-
+  // END OF OBJECT CONSTRUCTOR
   function stroke(color, alpha) {
     ctx.closePath();
     ctx.stroke();
@@ -150,3 +150,9 @@ function run() {
     window.setTimeout(callback, 1000 / 24);
   }
 }
+
+/*
+ * General Notes
+ * computelineSegment calls point by angle, which calls projectTo2D
+ * computeLineSegment also grabs gettheta
+ */

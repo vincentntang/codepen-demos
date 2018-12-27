@@ -21,3 +21,7 @@ https://www.youtube.com/watch?v=_2miX4rxkJs
 5. Enhancing flame with logs
 
 ![](https://i.imgur.com/2S7XVgX.gif)
+
+6. Modified animation so smoother
+
+![](https://i.imgur.com/m0RkHvZ.gif0)

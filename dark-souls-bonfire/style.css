@@ -3,7 +3,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  /* background-color: black; */
+  background-color: black;
 }
 
 .wrapper {
@@ -13,6 +13,24 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.wrapper::after {
+  content: "";
+  position: absolute;
+  right: -235px;
+  top: -350px;
+  width: 400px;
+  height: 500px;
+  background-color: orange;
+  filter: blur(50px);
+  border-radius: 50%;
+  z-index: -50;
+  animation: flicker-background 600ms ease-in infinite;
+}
+@keyframes flicker-background {
+  50% {
+    transform: scale(0.9);
+  }
 }
 
 .red {
@@ -42,28 +60,10 @@ body {
   background: lightyellow;
   box-shadow: 0px 0px 9px 4px lightyellow;
 }
-/* .blue {
-  left: 32px;
-  width: 15px;
-  height: 15px;
-  background: darkblue;
-  box-shadow: 0px 0px 15px 10px darkblue;
-}
-.black {
-  left: 20px;
-  width: 40px;
-  height: 40px;
-  bottom: -50px;
-  background: black;
-  box-shadow: 0px 0px 15px 10px black;
-}
-.base {
-  border-radius: 50%;
-  position: absolute;
-} */
+
 .flame-wrapper {
   position: relative;
-  animation: flicker 3ms ease-in infinite;
+  animation: flicker 600ms ease-in infinite;
 }
 .flame {
   bottom: 0;

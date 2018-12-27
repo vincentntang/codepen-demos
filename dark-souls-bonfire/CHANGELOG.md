@@ -13,3 +13,7 @@ https://www.youtube.com/watch?v=_2miX4rxkJs
 3. Box shadow and black background
 
 ![](https://i.imgur.com/7Qt3Zuz.png)
+
+4. Flicker Flame finished
+
+![](https://i.imgur.com/XYz3ZZf.gif)

@@ -38,4 +38,6 @@ body {
 .flame {
   bottom: 0;
   position: absolute;
+  border-radius: 50% 0% 50% 50%;
+  transform: rotate(-45deg);
 }

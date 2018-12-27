@@ -6,4 +6,6 @@ https://www.youtube.com/watch?v=_2miX4rxkJs
 
 ![](https://i.imgur.com/CHWDuep.png)
 
-2.
+2. Transform and border radius
+
+![](https://i.imgur.com/Y3cXmsl.png)

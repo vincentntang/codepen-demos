@@ -14,6 +14,10 @@ https://www.youtube.com/watch?v=_2miX4rxkJs
 
 ![](https://i.imgur.com/7Qt3Zuz.png)
 
-4. Flicker Flame finished
+4. Flicker Flame finished (end of tutorial)
 
 ![](https://i.imgur.com/XYz3ZZf.gif)
+
+5. Enhancing flame with logs
+
+![](https://i.imgur.com/2S7XVgX.gif)

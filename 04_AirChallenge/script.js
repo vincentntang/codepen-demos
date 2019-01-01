@@ -151,8 +151,3 @@ function run() {
   }
 }
 
-/*
- * General Notes
- * computelineSegment calls point by angle, which calls projectTo2D
- * computeLineSegment also grabs gettheta
- */

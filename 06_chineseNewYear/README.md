@@ -23,3 +23,7 @@ A work of horror
 Finished animation simple
 
 ![](https://i.imgur.com/oxXUmMt.gif)
+
+Slight closing eyes
+
+![](https://i.imgur.com/ZFVvRFr.gif)

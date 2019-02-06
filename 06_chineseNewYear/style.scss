@@ -78,6 +78,7 @@ body {
   transform: rotate(-10deg);
 }
 .eye {
+  background-color: black;
   width: 1px;
   height: 1px;
   border-radius: 50%;
@@ -105,6 +106,14 @@ body {
     transform: rotate(30deg);
   }
 }
+@keyframes eye-close {
+  90% {
+    width: 16px;
+    height: 0px;
+    border-radius: 0%;
+    border: 2px solid black;
+  }
+}
 .l-ear {
   animation: ear-spin-left 5s ease infinite;
 }
@@ -112,9 +121,11 @@ body {
   animation: ear-spin-right 5s ease infinite;
   animation-delay: 1.25s;
 }
-.eye,
 .snout {
   animation: head-spin 5s infinite;
+}
+.eye {
+  animation: eye-close 5s linear infinite, head-spin 5s infinite;
 }
 .l-eye {
   left: 50px;

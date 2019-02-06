@@ -1,31 +1,20 @@
+let canvas = document.getElementById("canvas");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+let ctx = canvas.getContext("2d");
+
 const max_fireworks = 5;
 const max_sparks = 50;
+let fireworksArray = [];
 
-let canvas = document.getElementById("canvas");
-let ctx = canvas.getContext("2d");
-let fireworks = [];
-
-canvas.width = 800;
-canvas.height = 800;
-
-// Create Fireworks!
-for (let i = 0; i < max_fireworks; i++) {
-  let spark = {
-    x: Math.random() * 800
-  };
-  fireworks.push(spark);
+class Firework {
+  constructor(x, y, dx, dy, color, age) {
+    Object.assign();
+  }
 }
 
-// Explode!
-function explode() {
-  fireworks.forEach((firework, index) => {
-    ctx.beginPath();
-    ctx.rect(firework.x, 20, 10, 100);
-    ctx.fillStyle = "red";
-    ctx.fill();
-  });
-  requestAnimationFrame(explode);
-}
+const animate = () => {
+  requestAnimationFrame(animate);
 
-requestAnimationFrame(explode);
-// Reset Fireworks
+  ctx;
+};

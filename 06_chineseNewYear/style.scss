@@ -60,6 +60,7 @@ body {
     content: ""; // position relative;
   }
 }
+
 .ear {
   width: 50px;
   height: 50px;
@@ -81,6 +82,23 @@ body {
   height: 1px;
   border-radius: 50%;
   top: 25px;
+}
+@keyframes head-spin {
+  from,
+  to {
+    transform: none;
+  }
+  50% {
+    left: 10px;
+    top: 20px;
+  }
+}
+.eye,
+.snout,
+.snout-center,
+.nostril,
+.cheek {
+  animation: head-spin 5s infinite;
 }
 .l-eye {
   left: 50px;

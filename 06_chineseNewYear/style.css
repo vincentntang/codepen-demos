@@ -82,6 +82,25 @@ body {
   top: 25px;
 }
 
+@keyframes head-spin {
+  from,
+  to {
+    transform: none;
+  }
+  50% {
+    left: 10px;
+    top: 20px;
+  }
+}
+
+.eye,
+.snout,
+.snout-center,
+.nostril,
+.cheek {
+  animation: head-spin 5s infinite;
+}
+
 .l-eye {
   left: 50px;
 }

@@ -30,7 +30,7 @@ body {
   align-items: center;
   position: relative;
   box-sizing: border-box;
-  border: 1px solid red;
+  // border: 1px solid red;
   // z-index: 0;
   * {
     background-color: $pig;
@@ -63,16 +63,16 @@ body {
 
 .ear {
   width: 50px;
-  height: 50px;
+  height: 70px;
   top: -30px;
   z-index: -6;
 }
-.l-ear {
+.r-ear {
   right: 5px;
   border-top-right-radius: 80%;
   transform: rotate(10deg);
 }
-.r-ear {
+.l-ear {
   left: 5px;
   border-top-left-radius: 80%;
   transform: rotate(-10deg);
@@ -88,23 +88,39 @@ body {
   to {
     transform: none;
   }
+  25% {
+    transform: translateX(-10px) translateY(-10px);
+  }
   50% {
-    left: 10px;
-    top: 20px;
+    transform: translateX(10px) translateY(-10px);
   }
 }
+@keyframes ear-spin-left {
+  25% {
+    transform: rotate(-30deg);
+  }
+}
+@keyframes ear-spin-right {
+  25% {
+    transform: rotate(30deg);
+  }
+}
+.l-ear {
+  animation: ear-spin-left 5s ease infinite;
+}
+.r-ear {
+  animation: ear-spin-right 5s ease infinite;
+  animation-delay: 1.25s;
+}
 .eye,
-.snout,
-.snout-center,
-.nostril,
-.cheek {
+.snout {
   animation: head-spin 5s infinite;
 }
 .l-eye {
   left: 50px;
 }
 .r-eye {
-  right: 50px;
+  left: 120px;
 }
 .snout {
   left: calc(50% - 25px);
@@ -119,7 +135,6 @@ body {
 }
 .snout-center {
   width: 100%;
-  height: 1px;
   top: calc(50% - 3px);
   border: 3px solid black;
 }

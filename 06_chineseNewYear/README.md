@@ -15,3 +15,11 @@ Finished fat piggy
 Piggy with correct colors
 
 ![](https://i.imgur.com/4tFf8GD.png)
+
+A work of horror
+
+![](https://i.imgur.com/SSe4o2x.gif)
+
+Finished animation simple
+
+![](https://i.imgur.com/oxXUmMt.gif)

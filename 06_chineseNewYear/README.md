@@ -11,3 +11,7 @@ Inititate cheeks
 Finished fat piggy
 
 ![](https://i.imgur.com/TRnexzO.png)
+
+Piggy with correct colors
+
+![](https://i.imgur.com/4tFf8GD.png)

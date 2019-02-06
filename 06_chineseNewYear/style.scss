@@ -27,33 +27,50 @@ body {
   box-sizing: border-box;
   border: 1px solid red;
   // z-index: 0;
-  // * {
-  //   background-color: #EF63A8;
-  //   border: 8px solid black;
-  //   box-sizing: border-box;
-  //   position: relative;
-  //   will-change: transform;
-  // }
-  // *:before,
-  // *:after, {
-  //   box-sizing: border-box;
-  //   position: relative;
-  // }
+  * {
+    background-color: #ef63a8;
+    border: 8px solid black;
+    box-sizing: border-box;
+    position: absolute;
+  }
+  *:before,
+  *:after {
+    box-sizing: border-box;
+    position: relative;
+  }
 }
 
 .torso {
   width: 175px;
   height: 150px;
   border-radius: 45%;
-  position: relative;
-  background-color: green;
 }
 .head {
   width: 200px;
   height: 150px;
   left: -20px;
-  top: -50px;
-  z-index: -2;
-  position: absolute;
-  background-color: pink;
+  top: -75px;
+  border-radius: 40%;
+}
+.leg {
+  width: 75px;
+  height: 100px;
+  bottom: 40px;
+  z-index: -5;
+}
+.fr-leg {
+  left: 65px;
+}
+.fl-leg {
+  right: 65px;
+}
+.bl-leg {
+  right: 71px;
+  z-index: -6;
+  bottom: 50px;
+}
+.br-leg {
+  left: 71px;
+  z-index: -6;
+  bottom: 50px;
 }

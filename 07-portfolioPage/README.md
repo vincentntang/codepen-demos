@@ -11,3 +11,5 @@ Features to be worked on:
 - Hover to see a different image.
 - Sort by using data-lang. Only show [javascript, python as examples]
 - Data-lang features, apply a CSS position absolute / relative CSS unit
+- Link to a new page with a further description
+- client page at end
